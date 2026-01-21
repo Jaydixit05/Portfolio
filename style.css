@@ -116,7 +116,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80px;
+    width: 60px;
     cursor: pointer;
     color: var(--win-white);
     text-align: center;
@@ -124,8 +124,8 @@ a:hover {
 }
 
 .desktop-icon img {
-    width: 64px;
-    height: 64px;
+    width: 45px;
+    height: 45px;
     margin-bottom: 5px;
     image-rendering: pixelated;
 }
@@ -138,7 +138,7 @@ a:hover {
 
 .desktop-icon:hover span {
     background-color: var(--win-blue-dark);
-    border: 1px dotted var(--win-white);
+
 }
 
 /* Hero Section (My Computer / Welcome) */
