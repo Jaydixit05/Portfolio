@@ -1,0 +1,42 @@
+<svg width="64" height="64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <!-- Folder Icon (Windows 95 Pixel Style) -->
+  
+  <!-- Back Tab (Darker Yellow/Beige) -->
+  <rect x="2" y="5" width="28" height="22" fill="#000000" /> <!-- Outline Drop Shadow -->
+  <rect x="2" y="5" width="27" height="21" fill="#808080" /> <!-- Dark Border -->
+  
+  <!-- Main Folder Body (Manila/Yellow) -->
+  <rect x="3" y="6" width="25" height="19" fill="#c0c0c0" /> <!-- Base fill -->
+  <rect x="3" y="6" width="25" height="19" fill="#ffff00" /> <!-- Actual Yellow #FFFF00 or standard Windows Yellow -->
+  <!-- Let's use the authentic muted yellow for the back, bright for front -->
+  
+  <!-- Back Tab Shape -->
+  <path d="M 3 6 L 12 6 L 14 8 L 27 8 L 27 24 L 3 24 Z" fill="#c0c0c0" /> 
+  <rect x="3" y="6" width="9" height="3" fill="#d4d4d4" /> <!-- Tab highlight -->
+  
+  <!-- Front Flap -->
+  <rect x="3" y="9" width="26" height="16" fill="#808080" /> <!-- Border -->
+  <rect x="3" y="9" width="25" height="15" fill="#ffffff" /> <!-- Highlight Left/Top -->
+  <rect x="4" y="10" width="24" height="14" fill="#808080" /> <!-- Shadow Right/Bottom -->
+  <rect x="4" y="10" width="23" height="13" fill="#ffff00" /> <!-- Main Face Color -->
+  
+  <!-- Pixel Dithering / Texture (Simplified) -->
+  <!-- Windows 95 folders were flat yellow with black outlines usually -->
+  
+  <!-- Redrawing simple flat style to match 'My Computer' better -->
+  <rect x="0" y="0" width="32" height="32" fill="none" /> 
+  
+  <!-- Outline -->
+  <path d="M 2 6 L 12 6 L 14 8 L 29 8 L 29 25 L 2 25 Z" fill="#000000" />
+  
+  <!-- Back Card -->
+  <path d="M 3 7 L 11 7 L 13 9 L 28 9 L 28 24 L 3 24 Z" fill="#808000" /> <!-- Darker Yellow (Olive) -->
+  
+  <!-- Front Flap -->
+  <rect x="3" y="11" width="26" height="14" fill="#ffff00" /> <!-- Bright Yellow -->
+  <rect x="3" y="11" width="1" height="14" fill="#ffffff" /> <!-- Highlight -->
+  <rect x="3" y="11" width="26" height="1" fill="#ffffff" /> <!-- Highlight -->
+  <rect x="28" y="11" width="1" height="14" fill="#808000" /> <!-- Shadow -->
+  <rect x="3" y="24" width="26" height="1" fill="#808000" /> <!-- Shadow -->
+
+</svg>

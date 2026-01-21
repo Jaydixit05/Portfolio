@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Dixit</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Desktop Icons (Navigation) -->
+    <div class="desktop-icons">
+        <a href="#home" class="desktop-icon">
+            <img src="images/computer_icon.svg" alt="My Computer">
+            <span>My Computer (Home)</span>
+        </a>
+        <a href="#projects" class="desktop-icon">
+            <img src="images/folder_icon.svg" alt="Projects">
+            <span>Projects</span>
+        </a>
+        <a href="#skills" class="desktop-icon">
+            <i class="fa-solid fa-microchip fa-2x" style="color: silver;"></i>
+            <span>Skills</span>
+        </a>
+        <a href="#contact" class="desktop-icon">
+            <i class="fa-solid fa-envelope fa-2x" style="color: white;"></i>
+            <span>Contact Me</span>
+        </a>
+        <a href="https://github.com/Jaydixit05" target="_blank" class="desktop-icon">
+            <i class="fa-brands fa-github fa-2x" style="color: black;"></i>
+            <span>GitHub</span>
+        </a>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Welcome Window -->
+        <section id="home" class="window">
+            <div class="window-title-bar">
+                <div class="window-title"><i class="fa-solid fa-user"></i> Welcome - Jay Dixit</div>
+                <div class="window-controls">
+                    <div class="window-button">_</div>
+                    <div class="window-button">X</div>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="profile-card">
+                    <!-- Placeholder for profile pic if user adds one later -->
+                    <div class="profile-pic">
+                        <img src="images/pixel_avatar.png" alt="Jay Dixit Avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Hi, I'm Jay Dixit</h1>
+                        <p><strong>Software Development Intern | Data Science Minor</strong></p>
+                        <p>Pursuing a progressive career in a dynamic environment. I build full-stack apps, analyze
+                            data, and solve problems with code.</p>
+                        <hr>
+                        <p><em>"Enhancing knowledge through continuous learning and innovation."</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Window -->
+        <section id="projects" class="window">
+            <div class="window-title-bar">
+                <div class="window-title"><i class="fa-solid fa-folder"></i> C:\Users\Jay\Projects</div>
+                <div class="window-controls">
+                    <div class="window-button">_</div>
+                    <div class="window-button">X</div>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>3 object(s) selected</p>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <h3><i class="fa-solid fa-chart-line"></i> Telco Churn Risk</h3>
+                            <p>Churn prediction model with interactive dashboard. Estimates customer churn probability.
+                            </p>
+                            <br>
+                            <a href="https://telco-churn-prediction1234.streamlit.app/" target="_blank">
+                                <button>Run .EXE (Demo)</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <h3><i class="fa-brands fa-android"></i> EduLab App</h3>
+                            <p>Full-stack Android app with Jitsi Meet & JDoodle APIs. Features AI chatbot for instant
+                                programming assistance.</p>
+                            <br>
+                            <span>Status: Completed</span>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <h3><i class="fa-solid fa-music"></i> Music Player</h3>
+                            <p>Python GUI music player. Robust directory selection and file management using OS library.
+                            </p>
+                            <br>
+                            <span>Lang: Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Window -->
+        <section id="skills" class="window">
+            <div class="window-title-bar">
+                <div class="window-title"><i class="fa-solid fa-tools"></i> System Properties - Skills</div>
+                <div class="window-controls">
+                    <div class="window-button">?</div>
+                    <div class="window-button">X</div>
+                </div>
+            </div>
+            <div class="window-body">
+                <fieldset style="border: 2px solid grey; padding: 10px;">
+                    <legend>Programming Languages</legend>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML</span>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset style="border: 2px solid grey; padding: 10px;">
+                    <legend>Frameworks & Libraries</legend>
+                    <div class="skills-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset style="border: 2px solid grey; padding: 10px;">
+                    <legend>Tools</legend>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+        <!-- Contact Window -->
+        <section id="contact" class="window">
+            <div class="window-title-bar">
+                <div class="window-title"><i class="fa-solid fa-envelope"></i> Outlook Express - Compose</div>
+                <div class="window-controls">
+                    <div class="window-button">_</div>
+                    <div class="window-button">X</div>
+                </div>
+            </div>
+            <div class="window-body">
+                <p><strong>To:</strong> Jay Dixit</p>
+                <p><strong>Subject:</strong> Hiring / Collaboration</p>
+                <hr>
+                <div style="text-align: center; padding: 20px;">
+                    <p>Connect with me via:</p>
+                    <a href="mailto:jay.s.dixit1234@gmail.com" class="window-button"
+                        style="width: auto; padding: 5px 20px; display: inline-flex; margin: 5px;">
+                        <i class="fa-solid fa-envelope"></i>&nbsp; Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/jay-dixit-888999900" target="_blank" class="window-button"
+                        style="width: auto; padding: 5px 20px; display: inline-flex; margin: 5px;">
+                        <i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="start-button">
+            <i class="fa-brands fa-windows"></i> Start
+        </div>
+        <div class="taskbar-divider"></div>
+        <div style="flex-grow: 1;"></div>
+        <div class="taskbar-time">
+            <span id="taskbar-clock">12:00 PM</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

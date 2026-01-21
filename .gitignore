@@ -1,0 +1,5 @@
+
+.vs/
+remove_bg.py
+*.log
+.DS_Store

@@ -1,0 +1,292 @@
+/* Windows 95 Retro Theme */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* Optional retro font */
+
+:root {
+    --win-teal: #008080;
+    --win-gray: #c0c0c0;
+    --win-gray-dark: #808080;
+    --win-gray-light: #dfdfdf;
+    --win-white: #ffffff;
+    --win-black: #000000;
+    --win-blue-dark: #000080;
+    --win-blue-light: #1084d0;
+    --font-main: 'MS Sans Serif', 'Segoe UI', sans-serif;
+    --font-pixel: 'VT323', monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--win-teal);
+    font-family: var(--font-main);
+    color: var(--win-black);
+    /* Prevent default scrollbar to stylize it? Standard is fine for now */
+    padding-bottom: 50px;
+    /* Space for taskbar */
+}
+
+a {
+    text-decoration: none;
+    color: var(--win-blue-dark);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Reusable Window Components --- */
+.window {
+    background-color: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray-dark) var(--win-gray-dark) var(--win-white);
+    box-shadow: 1px 1px 0 var(--win-black);
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-title-bar {
+    background: linear-gradient(90deg, var(--win-blue-dark), var(--win-blue-light));
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-title {
+    color: var(--win-white);
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.window-button {
+    width: 16px;
+    height: 14px;
+    background-color: var(--win-gray);
+    border: 1px solid;
+    border-color: var(--win-white) var(--win-gray-dark) var(--win-gray-dark) var(--win-white);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.window-button:active {
+    border-color: var(--win-gray-dark) var(--win-white) var(--win-white) var(--win-gray-dark);
+    transform: translate(1px, 1px);
+}
+
+.window-body {
+    padding: 15px;
+}
+
+/* --- Specific Section Styling --- */
+
+/* Desktop Icons Grid (Nav) */
+.desktop-icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    gap: 20px;
+    z-index: 10;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+    color: var(--win-white);
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.desktop-icon img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 5px;
+    image-rendering: pixelated;
+}
+
+.desktop-icon span {
+    font-size: 12px;
+    background: transparent;
+    padding: 2px;
+}
+
+.desktop-icon:hover span {
+    background-color: var(--win-blue-dark);
+    border: 1px dotted var(--win-white);
+}
+
+/* Hero Section (My Computer / Welcome) */
+#home {
+    margin-top: 50px;
+}
+
+.profile-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    border-color: var(--win-gray-dark) var(--win-white) var(--win-white) var(--win-gray-dark);
+    background-color: #fff;
+    overflow: hidden;
+    /* Ensure image stays inside border */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+.profile-info h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.project-card {
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray-dark) var(--win-gray-dark) var(--win-white);
+    padding: 2px;
+    background: #fff;
+}
+
+.card-inner {
+    border: 1px solid var(--win-black);
+    /* Inner black border often seen */
+    padding: 10px;
+    height: 100%;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    background: var(--win-blue-dark);
+    color: white;
+    padding: 2px 5px;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-gray-dark) var(--win-gray-dark) var(--win-white);
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: var(--win-gray);
+    border-top: 2px solid var(--win-white);
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    z-index: 100;
+    box-shadow: 0 -1px 0 var(--win-gray-dark);
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 10px;
+    background-color: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-black) var(--win-black) var(--win-white);
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.start-button:active {
+    border-color: var(--win-black) var(--win-white) var(--win-white) var(--win-black);
+    padding: 3px 9px 1px 11px;
+    /* Shift text */
+}
+
+.start-button img {
+    height: 20px;
+}
+
+.taskbar-divider {
+    border-left: 2px solid var(--win-gray-dark);
+    border-right: 2px solid var(--win-white);
+    height: 25px;
+    margin: 0 5px;
+}
+
+.taskbar-time {
+    margin-left: auto;
+    border: 2px solid;
+    border-color: var(--win-gray-dark) var(--win-white) var(--win-white) var(--win-gray-dark);
+    padding: 5px 10px;
+    background: var(--win-gray);
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .desktop-icons {
+        position: relative;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .window {
+        margin: 10px;
+        width: auto;
+    }
+}
