@@ -25,6 +25,7 @@ let tttGameActive = true;
 
 // Initialize Games if elements exist
 document.addEventListener('DOMContentLoaded', () => {
+    initSplashScreen();
     updateClock();
     setInterval(updateClock, 1000);
 
@@ -33,6 +34,34 @@ document.addEventListener('DOMContentLoaded', () => {
         initTTT();
     }
 });
+
+/* --- Splash Screen Logic --- */
+function initSplashScreen() {
+    const splash = document.getElementById('splash-screen');
+    const progress = document.getElementById('boot-progress');
+    const status = document.getElementById('boot-status');
+
+    if (!splash) return;
+
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            status.innerText = "System Ready. Booting...";
+            setTimeout(() => {
+                splash.style.opacity = '0';
+                setTimeout(() => splash.remove(), 800);
+            }, 500);
+        } else {
+            width += Math.random() * 15;
+            if (width > 100) width = 100;
+            progress.style.width = width + '%';
+
+            if (width > 40) status.innerText = "Loading Kernel...";
+            if (width > 70) status.innerText = "Starting UI Shell...";
+        }
+    }, 150);
+}
 
 /* --- Snake Game Functions --- */
 function initSnake() {

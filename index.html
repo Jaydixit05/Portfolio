@@ -12,9 +12,18 @@
 
 <body>
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle" id="theme-toggle">
-        <i class="fa-solid fa-moon"></i>
+    <!-- Modern Splash Screen (BIOS style) -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="bios-text">
+            <p>DIXIT BIOS (C) 2026 JAY DIXIT INC.</p>
+            <p>CPU: GENRE-AI PRO @ 4.20GHz</p>
+            <p>MEMORY TEST: 640KB OK</p>
+            <br>
+            <p id="boot-status">Initializing System...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="boot-progress"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Desktop Icons (Navigation) -->
@@ -38,6 +47,10 @@
         <a href="#contact" class="desktop-icon">
             <i class="fa-solid fa-envelope fa-2x" style="color: white;"></i>
             <span>Contact Me</span>
+        </a>
+        <a href="pdfs/resume.pdf" download class="desktop-icon">
+            <i class="fa-solid fa-floppy-disk fa-2x" style="color: #4169E1;"></i>
+            <span>Resume.doc</span>
         </a>
         <a href="https://github.com/Jaydixit05" target="_blank" class="desktop-icon">
             <i class="fa-brands fa-github fa-2x" style="color: black;"></i>
@@ -259,6 +272,10 @@
         <div class="taskbar-divider"></div>
         <div style="flex-grow: 1;"></div>
         <div class="taskbar-time">
+            <!-- Theme Toggle in Taskbar -->
+            <div class="taskbar-icon" id="theme-toggle" title="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </div>
             <span id="taskbar-clock">12:00 PM</span>
         </div>
     </div>
