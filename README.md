@@ -1,41 +1,45 @@
-# Jay Dixit - Personal Portfolio
+# 🎮 Jay Dixit - Retro Personal Portfolio
 
-A unique, retro-themed personal portfolio website inspired by the classic **Windows 95** operating system. 
+A unique, premium retro-themed personal portfolio website inspired by the classic **Windows 95** operating system, supercharged with modern AI and a secure backend.
 
-## 🎨 Theme & Design
-The site features a fully custom **Windows 95 Aesthetic**:
-- **Retro UI**: Teals, grays, and 3D beveled borders.
-- **Pixel Art Assets**: Custom generated pixel-art avatar and icons.
-- **Interactive Experience**: Taskbar with clock, "Start" menu, and desktop navigation.
-- **Responsive**: Adapts gracefully to mobile screens while maintaining the retro charm.
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://portfolio-eip0.onrender.com)
 
-## 🛠️ Tech Stack
-- **HTML5**: Semantic structure.
-- **CSS3**: Custom styling variables, flexbox/grid for layout, and retro visual effects.
-- **JavaScript**: Time logic for the taskbar clock and smooth interactions.
+## 🎨 New Premium UI Features
+- **BIOS Splash Screen**: A retro-style boot sequence (DIXIT BIOS) that greets visitors on arrival.
+- **Glassmorphism Design**: Modern translucent window bodies with backdrop blur effects, blending 90s nostalgia with modern aesthetics.
+- **Dark Mode Support**: A system-wide dark theme toggle, now integrated into the taskbar "tray."
+- **Responsive Layout**: Optimized for mobile, with a dynamic desktop-to-mobile transformation.
 
-## 🚀 Features
-- **Hero Section**: "Welcome" window with software developer profile.
-- **Projects Showcase**: "File Explorer" style window displaying:
-    - Telco Churn Risk Dashboard
-    - EduLab Android App
-    - Python Music Player
-- **Skills System**: "System Properties" window listing technical skills (Python, Java, React, Docker, etc.).
-- **Contact**: "Outlook Express" style contact window.
+## 🤖 Smart Features
+- **AI Assistant (Gemini Pro)**: A built-in chat assistant that knows Jay's skills and projects. It uses the Google Gemini API to provide intelligent, conversational responses.
+- **Smart Game AI**: Upgraded Tic-Tac-Toe AI that actually competes to win or block your moves, and a classic Snake game.
+
+## 🛠️ Modern Tech Stack
+- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+).
+- **Backend (Secure)**: Node.js & Express.js server acting as a secure proxy for API calls.
+- **Security**: Environment variables (`.env`) used to protect sensitive API keys.
+- **AI**: Google Generative AI (Gemini Pro).
 
 ## 📂 Project Structure
 ```
 /Portfolio-main
 │
-├── index.html        # Main entry point
-├── style.css         # All retro styling and responsiveness
-├── script.js         # Clock and behavior logic
-├── images/           # Custom pixel-art assets (SVG & PNG)
-└── README.md         # This file
+├── index.html        # Main entry point & UI structure
+├── style.css         # Modernized Design System & Glassmorphism
+├── script.js         # Core logic, Games, and Frontend-Backend bridge
+├── server.js         # Node.js backend proxy
+├── .env              # Sensitive Keys (Git-ignored)
+├── pdfs/             # CV/Resume storage
+├── images/           # SVGs and Pixel-art assets
+└── package.json      # Dependencies (Express, Dotenv, Cors)
 ```
 
-## 🌐 How to Run
-Simply open `index.html` in any modern web browser to step back into the 90s!
+## 🚀 Deployment (Render)
+This project is optimized for deployment on **Render** (Web Service):
+1.  Connect to GitHub.
+2.  Set Build Command: `npm install`
+3.  Set Start Command: `node server.js`
+4.  Add Environment Variable: `GEMINI_API_KEY`
 
 ---
-*Created by Jay Dixit*
+*Created with ❤️ by Jay Dixit*
