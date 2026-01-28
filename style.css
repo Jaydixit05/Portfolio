@@ -273,29 +273,82 @@ a:hover {
     font-size: 14px;
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness Improvements */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 60px;
+        /* More space for taskbar */
+    }
+
     .desktop-icons {
         position: relative;
         flex-direction: row;
         top: 0;
         left: 0;
-        padding: 10px;
+        padding: 15px;
         justify-content: center;
         flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .desktop-icon {
+        width: 70px;
+        color: var(--win-white);
     }
 
     .window {
         margin: 10px;
+        max-width: calc(100% - 20px);
         width: auto;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-assistant {
+        width: 90% !important;
+        right: 5% !important;
+        bottom: 70px !important;
+        left: 5% !important;
+    }
+
+    .taskbar {
+        height: 45px;
+    }
+
+    .start-button {
+        padding: 5px 15px;
+    }
+
+    .taskbar-time {
+        display: none;
+        /* Hide clock on very small screens to save space */
     }
 }
 
-/* Contact Form Styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+@media (max-width: 480px) {
+    .window-title {
+        font-size: 11px;
+    }
+
+    .desktop-icon span {
+        font-size: 10px;
+    }
 }
 
 .form-group {
