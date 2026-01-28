@@ -65,7 +65,7 @@
                     </div>
                     <div class="profile-info">
                         <h1>Hi, I'm Jay Dixit</h1>
-                        <p><strong>Software Development Intern | Data Science Minor</strong></p>
+                        <p><strong> </strong></p>
                         <p>Pursuing a progressive career in a dynamic environment. I build full-stack apps, analyze
                             data, and solve problems with code.</p>
                         <hr>
@@ -112,11 +112,11 @@
                     <!-- Project 3 -->
                     <div class="project-card">
                         <div class="card-inner">
-                            <h3><i class="fa-solid fa-music"></i> Music Player</h3>
-                            <p>Python GUI music player. Robust directory selection and file management using OS library.
+                            <h3><i class="fa-solid fa-music"></i>On Going project</h3>
+                            <p>
                             </p>
                             <br>
-                            <span>Lang: Python</span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
@@ -261,6 +261,41 @@
         <div class="taskbar-time">
             <span id="taskbar-clock">12:00 PM</span>
         </div>
+    </div>
+
+    <!-- AI Assistant Widget -->
+    <div class="ai-assistant" id="ai-assistant">
+        <div class="assistant-header">
+            <div class="assistant-title">
+                <i class="fa-solid fa-robot"></i> AI Assistant
+            </div>
+            <div class="assistant-controls">
+                <div class="assistant-button" id="minimize-assistant">_</div>
+                <div class="assistant-button" id="close-assistant">X</div>
+            </div>
+        </div>
+        <div class="assistant-body" id="assistant-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <strong>🤖 Assistant:</strong> Hi! I'm Jay's AI assistant. Ask me anything about his skills,
+                    projects, or experience!
+                </div>
+            </div>
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Ask me anything...">
+                <button id="send-message" class="send-button">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Assistant Button -->
+    <div class="assistant-toggle" id="assistant-toggle">
+        <i class="fa-solid fa-robot"></i>
     </div>
 
     <script src="script.js"></script>
