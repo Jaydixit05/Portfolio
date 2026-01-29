@@ -453,20 +453,33 @@ window.addEventListener('load', () => {
     }
 });
 
-/* --- Parallax Effect for Desktop Icons --- */
-document.addEventListener('mousemove', (e) => {
-    const icons = document.querySelectorAll('.desktop-icon');
-    const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;
+/* --- Optimized Parallax Effect for Desktop Icons --- */
+let mouseX = 0;
+let mouseY = 0;
+let parallaxTicking = false;
 
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX / window.innerWidth;
+    mouseY = e.clientY / window.innerHeight;
+
+    if (!parallaxTicking) {
+        window.requestAnimationFrame(() => {
+            updateParallax();
+            parallaxTicking = false;
+        });
+        parallaxTicking = true;
+    }
+});
+
+function updateParallax() {
+    const icons = document.querySelectorAll('.desktop-icon');
     icons.forEach((icon, index) => {
         const speed = (index + 1) * 2;
         const x = (mouseX - 0.5) * speed;
         const y = (mouseY - 0.5) * speed;
-
         icon.style.transform = `translate(${x}px, ${y}px)`;
     });
-});
+}
 
 /* --- Project Card Tilt Effect --- */
 document.querySelectorAll('.project-card').forEach(card => {

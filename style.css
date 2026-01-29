@@ -168,14 +168,15 @@ body.dark-mode .window-body {
     border-color: var(--win-gray-dark) var(--win-white) var(--win-white) var(--win-gray-dark);
     background-color: #fff;
     overflow: hidden;
-    /* Ensure image stays inside border */
+    flex-shrink: 0;
+    /* Prevent squashing */
 }
 
 .profile-pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    image-rendering: pixelated;
+    /* Removed pixelated rendering for high-res photos */
 }
 
 .profile-info h1 {
@@ -194,7 +195,7 @@ body.dark-mode .window-body {
     border: 2px solid;
     border-color: var(--win-white) var(--win-gray-dark) var(--win-gray-dark) var(--win-white);
     padding: 2px;
-    background: #fff;
+    background: #aeadad;
 }
 
 .card-inner {
@@ -1482,4 +1483,32 @@ body.dark-mode .ai-assistant {
         height: 30px;
         font-size: 14px;
     }
+}
+
+/* --- Retro Scrollbar --- */
+::-webkit-scrollbar {
+    width: 16px;
+    background: var(--win-gray);
+    border-left: 2px solid var(--win-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-black) var(--win-black) var(--win-white);
+    box-shadow: inset 1px 1px 0 var(--win-gray-light), inset -1px -1px 0 var(--win-gray-dark);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--win-gray);
+    border-color: var(--win-black) var(--win-white) var(--win-white) var(--win-black);
+}
+
+::-webkit-scrollbar-button {
+    background: var(--win-gray);
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-color: var(--win-white) var(--win-black) var(--win-black) var(--win-white);
+    display: block;
 }

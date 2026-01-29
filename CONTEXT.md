@@ -147,3 +147,12 @@ This document serves as the absolute source of truth for AI agents interacting w
 -   **When adding projects**: Update `index.html` (copy `.project-card`) AND `script.js` (`knowledgeBase.projects`).
 -   **When modifying style**: Always use CSS variables. Respect the retro aesthetic.
 -   **Refactoring**: Keep `script.js` functions modular. Do not switch to a framework (React/Vue) unless explicitly requested; the unique value is the Vanilla implementation.
+
+## 8. Interview Talking Points (Key Upgrades)
+### Performance Optimization
+- **Parallax Engine**: Switched from raw `mousemove` listeners to a `requestAnimationFrame` loop.
+- **Why?**: Decouples rendering from input processing, preventing "jank" on high-refresh-rate monitors and reducing main thread blocking.
+
+### UX Consistency
+- **Custom Scrollbars**: Implemented `::-webkit-scrollbar` styling to match the "Windows 95" aesthetic (square edges, gray background), replacing the jarring default OS scrollbars.
+- **Semantic SEO**: Updated `<title>` tag to "Jay Dixit - Full Stack Developer" for better professional visibility.
